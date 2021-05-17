@@ -26,13 +26,15 @@ import type {
   RadioGroupConfig,
   MenuConfig,
   SubMenuConfig,
+  StepsConfig,
+  DropdownConfig,
 } from './types'
 
 import { shallowReactive } from 'vue'
 import { numFormatter } from './numFormatter'
 
 // --------------------- General ---------------------
-const button = shallowReactive<ButtonConfig>({ mode: 'default', size: 'medium' })
+const button = shallowReactive<ButtonConfig>({ size: 'medium' })
 
 const icon = shallowReactive<IconConfig>({})
 
@@ -55,6 +57,11 @@ const space = shallowReactive<SpaceConfig>({ size: 'small' })
 const row = shallowReactive<RowConfig>({ wrap: true })
 
 // --------------------- Navigation ---------------------
+const dropdown = shallowReactive<DropdownConfig>({
+  placement: 'bottom-start',
+  trigger: 'hover',
+})
+
 const menu = shallowReactive<MenuConfig>({
   indent: 24,
   theme: 'light',
@@ -164,6 +171,10 @@ const progress = shallowReactive<ProgressConfig>({
   format: (percent: number) => percent + '%',
 })
 
+const steps = shallowReactive<StepsConfig>({
+  size: 'medium',
+})
+
 // --------------------- Other ---------------------
 const backTop = shallowReactive<BackTopConfig>({
   duration: 450,
@@ -184,6 +195,7 @@ export const defaultConfig: GlobalConfig = {
   space,
   row,
   // Navigation
+  dropdown,
   menu,
   subMenu,
   // Data Entry
@@ -205,6 +217,7 @@ export const defaultConfig: GlobalConfig = {
   result,
   spin,
   progress,
+  steps,
   // Other
   backTop,
   anchor,

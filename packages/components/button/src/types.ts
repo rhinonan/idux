@@ -1,6 +1,7 @@
 import type { DefineComponent } from 'vue'
-import type { ButtonMode, ButtonSize } from '@idux/components/config'
+import type { ButtonSize } from '@idux/components/config'
 
+export type ButtonMode = 'primary' | 'default' | 'dashed' | 'text' | 'link'
 export type ButtonShape = 'circle' | 'round'
 
 export interface ButtonProps {
@@ -15,7 +16,7 @@ export interface ButtonProps {
   icon?: string
 }
 
-export type ButtonComponent = InstanceType<DefineComponent<ButtonProps>>
+export type ButtonInstance = InstanceType<DefineComponent<ButtonProps>>
 
 export interface ButtonGroupProps {
   mode?: ButtonMode
@@ -23,4 +24,4 @@ export interface ButtonGroupProps {
   shape?: ButtonShape
 }
 
-export type ButtonGroupComponent = InstanceType<DefineComponent<ButtonGroupProps>>
+export type ButtonGroupInstance = InstanceType<DefineComponent<ButtonGroupProps>>

@@ -14,7 +14,8 @@ import { IxSpace } from './space'
 import { IxRow, IxCol } from './grid'
 // import Navigation
 import { IxAffix } from './affix'
-import { IxMenu } from './menu'
+import { IxDropdown, IxDropdownButton } from './dropdown'
+import { IxMenu, IxMenuItem, IxMenuItemGroup, IxMenuDivider, IxSubMenu } from './menu'
 // import Data Entry
 import { IxCheckbox, IxCheckboxGroup } from './checkbox'
 import { IxInput, IxTextarea } from './input'
@@ -24,6 +25,7 @@ import { IxSelect, IxOption, IxOptionGroup } from './select'
 import { IxSwitch } from './switch'
 // import Data Display
 import { IxCollapse, IxCollapsePanel } from './collapse'
+import { IxSteps, IxStep } from './steps'
 import { IxBadge } from './badge'
 import { IxCard } from './card'
 import { IxEmpty } from './empty'
@@ -54,8 +56,14 @@ const components = [
   IxRow,
   IxCol,
   // components Navigation
-  IxMenu,
   IxAffix,
+  IxDropdown,
+  IxDropdownButton,
+  IxMenu,
+  IxMenuItem,
+  IxMenuItemGroup,
+  IxMenuDivider,
+  IxSubMenu,
   // components Data Entry
   IxCheckbox,
   IxCheckboxGroup,
@@ -72,6 +80,8 @@ const components = [
   // components Data Display
   IxCollapse,
   IxCollapsePanel,
+  IxSteps,
+  IxStep,
   IxBadge,
   IxCard,
   IxEmpty,
